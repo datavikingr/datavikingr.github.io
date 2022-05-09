@@ -1,7 +1,10 @@
-# Moon
+# Startpage
 
-This is my second startpage.
+This is my startpage, forked from [voxie12/moon](https://github.com/voxie12/moon).
 
+I just personalizaed it for me and the links I need. Nothing special. Looks great though!
+
+Screenshot from voxie12:
 ![image](./screenshot.png)
 
-[Live preview of site](https://voxie12.github.io/moon)
+[Live preview of site](https://futurehaskins.github.io)
