@@ -208,7 +208,7 @@ input::placeholder {
   font-family: 'Nerd Font';
 }
 #tile9:hover:before {
-  content: "Google Calendar";
+  content: "G Calendar";
   font-family: hack;
   font-size: 36px;
 }
