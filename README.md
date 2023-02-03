@@ -1,8 +1,8 @@
 # Startpage
 
-This is my startpage, forked from [voxie12/moon](https://github.com/voxie12/moon).
+This is my startpage, forked from [voxie12/moon](https://github.com/voxie12/moon) once upon a time. Since then I've started playing around with the HTML and CSS a little bit, and I like this more. I am still keep their JS script for the date, though. That's all that's left at this point.
 
-I just personalizaed it for me and the links I need. Nothing special. Looks great though!
+I'm clearly pretty new at HTML and CSS, but I like this. Plays nice with a bunch of different sizes and positions.
 
 Screenshot from voxie12:
 ![image](./screenshot.png)

@@ -1,104 +1,59 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>ᛋᛏᚨᚱᛏ ᛈᚨᚷᛖ</title>
-        <link rel="stylesheet" href="style.css">
+        <!--<title>ᛋᛏᚨᚱᛏ ᛈᚨᚷᛖ</title> -->
+        <link rel="stylesheet" href="assets/pizzazz.css">
     </head>
     <body>
-      <div class="clock-box">
-        <div id="clockbox"></div>
-
-        <script type="text/javascript">
-        function GetClock(){
-        var d=new Date();
-        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-        if(nmin<=9) nmin="0"+nmin;
-        if(nsec<=9) nsec="0"+nsec;
-        
-        var clocktext=""+nhour+":"+nmin+":"+nsec+"";
-        document.getElementById('clockbox').innerHTML=clocktext;
-        }
-        
-        GetClock();
-        setInterval(GetClock,1000);
-        </script>
-        
-
-        <div id="datebox"></div>
-
-<script type="text/javascript">
-var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-function GetClock(){
-var d=new Date();
-var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-
-var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
-document.getElementById('datebox').innerHTML=clocktext;
-}
-
-GetClock();
-setInterval(GetClock,1000);
-</script>
-
-
-
-      </div>
-     
-      <img src="wallpaper/wifeandI.png" alt="anime of my wife and I">
-
-
-        <nav>
-          
-            <ul>
-			  <li><a href="https://github.com">github</a></li>
-              <li><a href="https://mail.google.com/mail/u/0/#inbox">email</a></li>
-              <li><a href="https://drive.google.com/drive/my-drive">google drive</a></li>
-              <li><a href="https://sumo.app">sumo.app</a></li>
-            </ul>
-        
-            <ul>
-              <li><a href="https://feedly.com/i/my">feedly</a></li>
-              <li><a href="https://wttr.in/~Joppa+MD">weather</a></li>
-			  <li><a href="https://www.reddit.com/r/worldnews/">world news</a></li>
-			  <li><a href="https://12ft.io/">12ft ladder</a></li>
-            </ul>
-        
-            <ul>
-              <li><a href="https://online-go.com/">play go</a></li>
-              <li><a href="https://virtualtabletop.io/lagr">board games</a></li>
-              <li><a href="https://store.steampowered.com/">steam</a></li>
-              <li><a href="https://www.xbox.com/en-US/play">xbox cloud gaming</a></li>
-            </ul>
-
-            <ul>
-              <li><a href="https://temp-mail.org/en/">temp email</a></li>
-              <li><a href="https://www.noip.com/">no-ip</a></li>
-              <li><a href="https://hub.docker.com/">dockerhub</a></li>
-              <li><a href="https://beta.openai.com/">ChatGPT</a></li>
-            </ul>
-
-			<ul>
-              <li><a href="https://www.reddit.com/r/ProgrammerHumor/">r/ProgrammerHumor</a></li>
-              <li><a href="https://www.reddit.com/r/pagan/">r/pagan</a></li>
-              <li><a href="https://www.reddit.com/r/Bonsai/">r/bonsai</a></li>
-              <li><a href="https://www.reddit.com/r/gardening/">r/gardening</a></li>
-            </ul>
-            
-
-          </nav>
-          <!-- We're gonna test a 1-4-1 swap with google and see what happens -->
-          <!-- Default: <form action="https://duckduckgo.com/" method="GET" target="_blank"> -->
-          <!-- Tried, worked but didn't receive query: <form action="https://search.brave.com/" method="GET" target="_blank"> -->
-          <!-- Google works, but they're trash. -->
-          <!-- I guess the jotun I know is better than the one I don't. -->
-          <form action="https://google.com/" method="GET" target="_blank">
-            <input autofocus
-                   name="q"
-                   type="search"
-                   placeholder="google search..."
-                    tabindex="1">
-          </form>
+        <div class="wholebody">
+            <div class="leftside">
+                <div class="clock-box">
+                    <div id="clockbox" class="time"></div>
+                    <script type="text/javascript">
+                        function GetClock(){
+                        var d=new Date();
+                        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+                        if(nmin<=9) nmin="0"+nmin;
+                        if(nsec<=9) nsec="0"+nsec;
+                        var clocktext=""+nhour+":"+nmin+"";
+                        document.getElementById('clockbox').innerHTML=clocktext;
+                        }
+                        GetClock();
+                        setInterval(GetClock,1000);
+                    </script>
+                    <div id="datebox" class="date"></div>
+                    <script type="text/javascript">
+                        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+                        function GetClock(){
+                        var d=new Date();
+                        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+                        var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+                        document.getElementById('datebox').innerHTML=clocktext;
+                        }
+                        GetClock();
+                        setInterval(GetClock,1000);
+                    </script>
+                </div>
+                <div class="image" style="text-align: center;">
+                    <img src="assets/wifeandI.png">
+                </div>
+            </div>
+            <div class="rightside">
+                <form action="https://duckduckgo.com/" method="GET" target="_blank" class="searchbox">
+                    <input autofocus name="q" type="search" placeholder="private search..." tabindex="1">
+                </form>
+                <div class="navtiles">
+                    <a class="tile" id="tile1" href="https://gmail.com"></a>
+                    <a class="tile" id="tile2" href="https://drive.google.com"></a>
+                    <a class="tile" id="tile9" href="https://wttr.in/~Joppa+MD"></a>
+                    <a class="tile" id="tile3" href="https://github.com"></a>
+                    <a class="tile" id="tile4" href="https://linkedin.com"></a>
+                    <a class="tile" id="tile8" href="https://chat.openai.com"></a>
+                    <a class="tile" id="tile5" href="https://reddit.com"></a>
+                    <a class="tile" id="tile7" href="https://feedly.com"></a>
+                    <a class="tile" id="tile6" href="https://youtube.com"></a>                                                            
+                </div>
+            </div>
+        </div>
     </body>
 </html>
