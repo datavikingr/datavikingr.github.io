@@ -208,12 +208,12 @@ input::placeholder {
   font-family: 'Nerd Font';
 }
 #tile9:hover:before {
-  content: "wttr.in";
+  content: "Google Calendar";
   font-family: hack;
   font-size: 36px;
 }
 #tile9:before {
-  content: "\f067e";
+  content: "\f073";
   font-size: 72px;
   font-family: 'Nerd Font';
 }
