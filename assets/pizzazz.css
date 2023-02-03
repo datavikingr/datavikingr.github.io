@@ -4,7 +4,11 @@ body,html {
 }
 @font-face {
     font-family: 'Nerd Font';
-    src: url('./Hack Regular Nerd Font Complete.ttf') format('truetype');
+    src: url('assets/Hack Regular Nerd Font Complete.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'hack';
+    src: url('assets/Hack Regular Nerd Font Complete.ttf') format('truetype');
 }
 .wholebody {
     width: 95%;
