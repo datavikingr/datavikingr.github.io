@@ -142,12 +142,12 @@ input::placeholder {
   font-family: 'Nerd Font';
 }
 #tile2:hover:before {
-  content: "Google Drive";
+  content: "Notion";
   font-family: hack;
   font-size: 36px;
 }
 #tile2:before {
-  content: "\e731";
+  content: "\ebaf";
   font-size: 72px;
   font-family: 'Nerd Font';
 }
