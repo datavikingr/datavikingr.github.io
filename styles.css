@@ -1,0 +1,241 @@
+:root {
+    --bgcol: #788f6f; 
+    --bordercol: #E0FBFC;
+    --boxcol: #5C6B73;
+    --textcol: white;
+}
+@font-face {
+    font-family: 'FiraCode';
+    src: url('/assets/FiraCode/FiraCodeNerdFontMono-Regular.ttf');
+}
+@keyframes text {
+    0% {text-shadow: 0 0 5px #E0FBFC, 0 0 10px #E0FBFC, 0 0 15px #E0FBFC;}
+    100% {text-shadow: 0 0 20px #1cacf9, 0 0 30px #1cacf9, 0 0 40px #1cacf9;}
+}
+html {
+    background-color: var(--bgcol);
+    overflow: hidden;
+}
+input {
+    width: 42.5vw;
+    height: 10vh;
+    outline: none;
+    box-shadow: none;
+}
+input::placeholder {
+    color: var(--textcol);
+}
+a:hover {
+    text-decoration:underline;
+    animation: text 1s forwards;
+}
+.text {
+    background-color: var(--boxcol);
+    color: var(--textcol);
+    font-family: 'FiraCode', monospace;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.searchtext {
+    background-color: var(--boxcol);
+    color: var(--textcol);
+    font-family: 'FiraCode', monospace;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.box {
+    position: absolute;
+    background-color: var(--boxcol);
+    border: 4px solid var(--bordercol);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black;
+}
+#ruinsbox {
+    top: 20vh;
+    left: 25vw;
+    z-index: 0;
+    height: 75vh;
+    width: auto;
+}
+#ruins {
+    max-height: 100%;
+    width: auto;
+}
+#punkbox {
+    top: 0.33vh; 
+    left: 24vw; 
+    z-index: 1;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+#punk {
+    max-width: 100%; /*Ensures fill of circle on the right */
+    height: auto;
+}
+#linkbox {
+    top: 5vh;
+    left: 5vh;
+    z-index: 1;
+    height: 90vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+#worklinks {
+    top: 5vh;
+    left: 5vh;
+    z-index: 1;
+    height: 90vh;
+    width: 20vw;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+#linkbox::-webkit-scrollbar {
+    display: none;
+}
+#worklinks::-webkit-scrollbar {
+    display: none;
+}
+#datetime {
+    top: 5vh;
+    left: 25vw;
+    z-index: 0;
+    height: 10vh;
+    width: 70vw;
+}
+#calendarlink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#calendarwrite {
+    padding-left: 16px;
+    text-shadow: 0 0 5px #b04b19, 0 0 10px red, 0 0 15px #b04b19;
+}
+#weatherbox {
+    top: 20vh;
+    left: 52.5vw;
+    z-index: 1;
+    height: 10vh;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#googlesearch {
+    top: 35vh;
+    left: 52.5vw;
+    z-index: 1;
+    height: 10vh;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#duckduckgosearch {
+    top: 50vh;
+    left: 52.5vw;
+    z-index: 1;
+    height: 10vh;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#wikipediasearch {
+    top: 65vh;
+    left: 52.5vw;
+    z-index: 1;
+    height: 10vh;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#newsbox {
+    top: 80vh;
+    left: 52.5vw;
+    z-index: 1;
+    height: 15vh;
+    width: 42.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#news {
+    font-size: 42px;
+    text-shadow: 0 0 5px #b04b19, 0 0 10px red, 0 0 15px #b04b19;
+}
+#mhbox {
+    top: 77.5vh;
+    left: 88vw;
+    z-index: 1;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+#guildlogo {
+    max-width: 100%; /*Ensures fill of circle on the right */
+    height: auto;
+}
+#yggybox {
+    position: absolute;
+    top:0vh;
+    left: 0vw;
+    z-index: -1;
+}
+.yggy {
+    height: auto;
+    width: 33vw;
+    opacity: 0.05;
+}
+/* Media query for larger resolutions */
+@media screen and (min-width: 2560px) {
+    .text {
+        font-size: 42px;
+    }
+    .searchtext {
+        font-size: 42px;
+    }
+    input {
+        width: 40vw;
+    }
+    #punkbox {
+        width: 300px; 
+        height: 300px; 
+    }
+    #mhbox {
+        width: 300px; 
+        height: 300px;
+    }
+    #weatherbox {
+        left: 55vw;
+        width: 40vw;
+    }
+    #googlesearch {
+        left: 55vw;
+        width: 40vw;
+    }
+    #duckduckgosearch {
+        left: 55vw;
+        width: 40vw;
+    }
+    #wikipediasearch {
+        left: 55vw;
+        width: 40vw;
+    }
+}

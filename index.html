@@ -1,62 +1,102 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <!--<title>ᛋᛏᚨᚱᛏ ᛈᚨᚷᛖ</title> -->
-        <link rel="stylesheet" href="assets/pizzazz.css">
-    </head>
-    <body>
-        <div class="wholebody">
-            <div class="leftside">
-                <div class="clock-box">
-                    <div id="clockbox" class="time"></div>
-                    <script type="text/javascript">
-                        function GetClock(){
-                        var d=new Date();
-                        var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
-                        if(nmin<=9) nmin="0"+nmin;
-                        if(nsec<=9) nsec="0"+nsec;
-                        var clocktext=""+nhour+":"+nmin+"";
-                        document.getElementById('clockbox').innerHTML=clocktext;
-                        }
-                        GetClock();
-                        setInterval(GetClock,1000);
-                    </script>
-                    <div id="datebox" class="date"></div>
-                    <script type="text/javascript">
-                        var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                        var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
-                        function GetClock(){
-                        var d=new Date();
-                        var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-                        var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"";
-                        document.getElementById('datebox').innerHTML=clocktext;
-                        }
-                        GetClock();
-                        setInterval(GetClock,1000);
-                    </script>
-                </div>
-                <div class="weatherbox">
-                    <p>Fight me</p>
-                </div>
-            </div>
-            <div class="image" style="text-align: center;">
-                <img src="assets/punk.jpg">
-            </div>
-            <div class="rightside">
-                <form action="https://www.google.com/" method="GET" target="_blank" class="searchbox">
-                    <input autofocus name="q" type="search" placeholder="google search..." tabindex="1">
-                </form>
-            </div>
-            <div class="navtiles">
-                <a class="tile" id="tile1" href="https://gmail.com"></a>
-                <a class="tile" id="tile9" href="https://calendar.google.com/"></a>
-                <a class="tile" id="tile6" href="https://youtube.com"></a>  
-                <a class="tile" id="tile2" href="https://www.notion.so/"></a>
-                <a class="tile" id="tile3" href="https://github.com"></a>
-                <a class="tile" id="tile8" href="https://chat.openai.com"></a>
-                <a class="tile" id="tile4" href="https://linkedin.com"></a>
-                <a class="tile" id="tile5" href="https://reddit.com"></a>
-                <a class="tile" id="tile7" href="https://feedly.com"></a>                                    
-            </div>
-        </div>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Start Date</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box" id="ruinsbox">
+        <img id="ruins" src="assets/pixelruins.png">
+    </div>
+    <div class="box" id="linkbox">
+        <a class="text" href="#" id="toggle-link1">Work Links</a>
+        <a class="text" href="https://reddit.com" target="_blank">Reddit</a>
+        <a class="text" href="https://youtube.com" target="_blank">YouTube</a>
+        <a class="text" href="https://mail.google.com" target="_blank">Email</a>
+        <a class="text" href="https://notion.so" target="_blank">Notion</a>
+        <a class="text" href="https://github.com" target="_blank">GitHub</a>
+        <a class="text" href="https://chat.openai.com/" target="_blank">ChatGPT</a>
+        <a class="text" href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+        <a class="text" href="https://sumo.app/" target="_blank">Sumo Apps</a>
+        <a class="text" href="https://wavemakercards.com/" target="_blank">Wavemaker</a>
+        <a class="text" href="https://hub.docker.com target="_blank"">Docker Hub</a>
+        <a class="text" href="https://12ft.io/" target="_blank">12ft Ladder</a>
+        <a class="text" href="https://hackaday.com/" target="_blank">Hackaday</a>
+        <a class="text" href="https://mullvad.net/en" target="_blank">Mullvad VPN</a>
+        <a class="text" href="https://login.tailscale.com/" target="_blank">Tailscale</a>
+        <a class="text" href="https://temp-mail.org/en/" target="_blank">Temp Mail</a>
+        <a class="text" href="https://myfiosgateway.com/#/login" target="_blank">My Fios Gateway</a>
+        <a class="text" href="https://192.168.1.229/admin/index.php" target="_blank">Pi Hole</a>
+    </div>
+    <div class="box" id="worklinks">
+        <a class="text" href="#" id="toggle-link2">Personal Links</a>
+        <a class="text" href="https://outlook.live.com/owa/" target="_blank">Outlook</a>
+        <a class="text" href="https://www.microsoft.com/en-us/microsoft-teams/" target="_blank">Teams</a>
+        <a class="text" href="https://calweb.tek.com/#!/" target="_blank">CalWeb</a>
+    </div>
+    <div class="box" id="punkbox">
+        <img id="punk" src="assets/punk.jpg">
+    </div>
+    <!---->
+    <div class="box" id="datetime">
+        <a class="text" id="calendarlink" href="https://calendar.google.com" target="_blank">
+            <div class="text" id="clockwrite"></div>
+            <div class="text" id="calendarwrite"></div>
+        </a>
+    </div>
+    <div class="box" id="weatherbox">
+        <a class="text" href="https://wttr.in/Joppatowne?u" target="_blank">
+            <div class="text" id="weather"></div>
+        </a>
+    </div>
+    <div class="box" id="googlesearch">
+        <form action="https://www.google.com/" method="GET" target="_blank" class="searchbox">
+            <input autofocus class="searchtext" name="q" type="search" placeholder="Google Search..." tabindex="1">
+        </form>
+    </div>
+    <div class="box" id="duckduckgosearch">
+        <form action="https://duckduckgo.com/" method="GET" target="_blank" class="searchbox">
+            <input class="searchtext" name="q" type="search" placeholder="Duck Duck Go Search..." tabindex="2">
+        </form>
+    </div>
+    <div class="box" id="wikipediasearch">
+        <form action="https://en.wikipedia.org/wiki/Special:Search" method="GET" target="_blank" class="searchbox">
+            <input class="searchtext" name="search" type="search" placeholder="Wikipedia Search..." tabindex="3">
+        </form>
+    </div>
+    <div class="box" id="newsbox">
+        <div class="text" id="news">ᚪᚹᛖᚾᚪᚾ᛫ᚦᛖ᛫ᛖᚾᛞᛖ</div>
+    </div>
+    <div class="box" id="mhbox">
+        <img id="guildlogo" src="https://i.pinimg.com/originals/7a/63/bf/7a63bf71a3584d987a9dce5f314eb634.jpg">
+    </div>
+    <div id="yggybox">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">
+        <img src="assets/ygdrasil.png" class="yggy">       
+    </div>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
 </html>
