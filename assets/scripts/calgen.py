@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 days = ["ᚠ","ᚢ","ᚦ","ᚩ","ᚱ","ᚳ","ᚷ"]
 months = ["ᚫᚠᛏᛖᚱᚪᚷᛇᛚᚪ","ᛋᚩᛚᛗᚩᚾᚪᚦ","ᚻᚱᛖᚦᛗᚩᚾᚪᚦ","ᛇᛥᚱᛖᛗᚩᚾᚪᚦ","ᚦᚱᛁᛗᛁᛚᚳᛖᛗᚩᚾᚪᚦ","ᚫᚱᚪᛚᛁᚦᚪ","ᛚᛁᚦᚪᛗᚩᚾᚪᚦ","ᚫᚠᛏᛖᚱᚪᛚᛁᚦᚪ","ᚹᛇᛞᛗᚩᚾᚪᚦ","ᚻᚫᛚᛁᚷᛗᚩᚾᚪᚦ","ᚹᛁᚾᛏᛖᚱᚠᚣᛚᛖᚦ","ᛒᛚᚩᛏᛗᚩᚾᚪᚦ","ᚫᚱᚪᚷᛇᛚᚪ"]
 #current_year = datetime.now().year
-current_year = 2024
+current_year = 2023
 j = 1
 master_array = []
 yulestartadj_array = []
